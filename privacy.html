@@ -14,21 +14,57 @@
     a { color: #00ff88; }
     .muted { opacity: 0.6; font-size: 0.9rem; }
     ul { padding-left: 1.2em; }
+    .tablewrap { overflow-x: auto; margin: 1.2em 0 0.4em; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.93rem; }
+    th, td { border: 1px solid #1e3a1e; padding: 9px 11px;
+             text-align: left; vertical-align: top; line-height: 1.55; }
+    th { color: #00ff88; background: #101c10; font-weight: 600; white-space: nowrap; }
+    td:first-child { white-space: nowrap; font-weight: 600; }
+    td a { text-decoration: none; }
+    .perm { margin: 0.5em 0 1em; font-size: 0.9rem;
+            border-left: 3px solid #1e3a1e; padding: 2px 0 2px 10px; opacity: 0.85; }
+    .perm b { color: #7fdca8; font-weight: 600; }
+    @media (max-width: 560px) {
+      table { font-size: 0.85rem; }
+      th, td { padding: 7px 8px; }
+    }
   </style>
 </head>
 <body>
   <h1>개인정보 처리방침 (Privacy Policy)</h1>
-  <p class="muted">시행일: 2026년 8월 3일 · 최종 개정: 2026년 8월 27일 · 개발자: dododong (dododong.dev@gmail.com)</p>
+  <p class="muted">시행일: 2026년 8월 3일 · 최종 개정: 2026년 8월 31일 · 개발자: dododong (dododong.dev@gmail.com)</p>
 
-  <p>본 방침은 dododong 이 Google Play 에 배포하는 모든 앱
-  (전투력 측정기, 키워드 스나이퍼, 앱브레이크, 지퍼백, 팝업그만, 언제나 밝음, 재워줘, 블라인드 에코, 안읽은척 등)에 적용됩니다.</p>
+  <p>본 방침은 dododong 이 Google Play 에 배포하는 모든 앱에 적용됩니다.
+  앱별로 사용하는 권한과 해당 설명 위치는 아래 표와 같습니다.</p>
+
+  <div class="tablewrap">
+  <table>
+    <thead>
+      <tr><th>앱</th><th>사용하는 주요 권한</th><th>설명</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>전투력 측정기</td><td>카메라</td><td><a href="#app-scouter">2번 항목</a></td></tr>
+      <tr><td>키워드 스나이퍼</td><td>알림 접근</td><td><a href="#app-keywordsniper">3번 항목</a></td></tr>
+      <tr><td>앱브레이크</td><td>사용 정보 접근 · 다른 앱 위에 표시</td><td><a href="#app-appbreak">4번 항목</a></td></tr>
+      <tr><td>지퍼백</td><td>사진·동영상(파일) 접근</td><td><a href="#app-zipbag">5번 항목</a></td></tr>
+      <tr><td>팝업그만</td><td>알림 접근 · 방해 금지 접근</td><td><a href="#app-popupstop">6번 항목</a></td></tr>
+      <tr><td>언제나 밝음</td><td>사용 정보 접근 · 다른 앱 위에 표시</td><td><a href="#app-alwaysbright">7번 항목</a></td></tr>
+      <tr><td>재워줘</td><td>알림 접근 · 사용 정보 접근 · 다른 앱 위에 표시 · 기기 관리자</td><td><a href="#app-jaewojwo">8번 항목</a></td></tr>
+      <tr><td>블라인드 에코</td><td>민감 권한 없음 (진동 · 센서)</td><td><a href="#app-blindecho">9번 항목</a></td></tr>
+      <tr><td>안읽은척</td><td>알림 접근</td><td><a href="#app-readvault">10번 항목</a></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="muted">모든 앱에 공통으로 적용되는 내용은 1번(수집하는 개인정보)과
+  11~13번(광고 · 아동 · 문의) 항목에 있습니다.</p>
 
   <h2>1. 수집하는 개인정보</h2>
   <p><strong>저희 앱은 개인정보를 수집하지 않으며, 자체 서버도 운영하지 않습니다.</strong>
   회원가입·로그인 기능이 없고, 이름·이메일·연락처 등 어떠한 개인정보도
   요구하거나 저장하지 않습니다.</p>
 
-  <h2>2. 카메라 권한 (전투력 측정기)</h2>
+  <h2 id="app-scouter">2. 전투력 측정기</h2>
+  <p class="perm">사용 권한 · <b>카메라</b></p>
   <ul>
     <li>카메라 영상은 <strong>기기 내부에서만</strong> 실시간 분석되며(온디바이스 ML),
         외부 서버로 전송·저장되지 않습니다.</li>
@@ -38,13 +74,15 @@
         앱 삭제 시 함께 삭제됩니다.</li>
   </ul>
 
-  <h2>3. 알림 접근 권한 (키워드 스나이퍼)</h2>
+  <h2 id="app-keywordsniper">3. 키워드 스나이퍼</h2>
+  <p class="perm">사용 권한 · <b>알림 접근</b></p>
   <ul>
     <li>알림 내용은 키워드 매칭을 위해 <strong>기기 내부에서만</strong> 처리되며,
         외부로 전송·저장되지 않습니다.</li>
   </ul>
 
-  <h2>4. 사용 정보 접근 · 다른 앱 위에 표시 권한 (앱브레이크)</h2>
+  <h2 id="app-appbreak">4. 앱브레이크</h2>
+  <p class="perm">사용 권한 · <b>사용 정보 접근</b> · <b>다른 앱 위에 표시</b></p>
   <ul>
     <li><strong>사용 정보 접근(PACKAGE_USAGE_STATS)</strong>: 사용자가 직접 제한을 설정한 앱의
         사용 시간을 측정하기 위해서만 사용됩니다. 어떤 앱을 얼마나 썼는지에 대한 정보는
@@ -55,7 +93,8 @@
         앱 삭제 시 함께 삭제됩니다.</li>
   </ul>
 
-  <h2>5. 사진·동영상 접근 (지퍼백)</h2>
+  <h2 id="app-zipbag">5. 지퍼백</h2>
+  <p class="perm">사용 권한 · <b>사진·동영상(파일) 접근</b> · <b>알림</b> · <b>인터넷</b></p>
   <p>지퍼백은 압축파일(ZIP) 안의 동영상·사진을 압축 해제 없이 바로 열어 보고, 사용자가 고른
   미디어를 암호가 걸린 ZIP "파우치"로 보관해 주는 앱입니다.</p>
   <ul>
@@ -76,7 +115,8 @@
         기기 내부에만 보관되고 앱 삭제 시 함께 삭제됩니다.</li>
   </ul>
 
-  <h2>6. 알림 접근 · 방해 금지 접근 권한 (팝업그만)</h2>
+  <h2 id="app-popupstop">6. 팝업그만</h2>
+  <p class="perm">사용 권한 · <b>알림 접근</b> · <b>방해 금지 접근</b></p>
   <p>팝업그만은 알림이 올 때 화면 상단에 뜨는 팝업(헤드업 알림)만 숨기고, 알림 소리·진동과
   알림창은 그대로 유지하는 앱입니다. 이를 위해 다음 권한을 사용합니다.</p>
   <ul>
@@ -91,7 +131,8 @@
         보관되고 앱 삭제 시 함께 삭제됩니다.</li>
   </ul>
 
-  <h2>7. 사용 정보 접근 · 다른 앱 위에 표시 권한 (언제나 밝음)</h2>
+  <h2 id="app-alwaysbright">7. 언제나 밝음</h2>
+  <p class="perm">사용 권한 · <b>사용 정보 접근</b> · <b>다른 앱 위에 표시</b> · <b>알림</b></p>
   <p>언제나 밝음은 사용자가 직접 등록한 앱(결제·QR·쿠폰 앱 등)을 실행했을 때 화면을
   최대 밝기로 올려주는 앱입니다. 이를 위해 다음 권한을 사용합니다.</p>
   <ul>
@@ -109,7 +150,8 @@
         보관되고 앱 삭제 시 함께 삭제됩니다.</li>
   </ul>
 
-  <h2>8. 알림 접근 · 사용 정보 접근 · 다른 앱 위에 표시 · 기기 관리자 권한 (재워줘)</h2>
+  <h2 id="app-jaewojwo">8. 재워줘</h2>
+  <p class="perm">사용 권한 · <b>알림 접근</b> · <b>사용 정보 접근</b> · <b>다른 앱 위에 표시</b> · <b>기기 관리자(화면 잠금)</b> · <b>정확한 알람</b></p>
   <p>재워줘는 사용자가 정한 시각이 되면 등록해 둔 앱의 소리를 멈추고 화면을 정리해 주는
   앱입니다. 이를 위해 다음 권한을 사용합니다.</p>
   <ul>
@@ -134,7 +176,8 @@
         모두 기기 내부에만 보관되고 앱 삭제 시 함께 삭제됩니다.</li>
   </ul>
 
-  <h2>9. 블라인드 에코</h2>
+  <h2 id="app-blindecho">9. 블라인드 에코</h2>
+  <p class="perm">사용 권한 · <b>진동</b> · <b>방향·움직임 센서</b> · <b>인터넷</b> (민감 권한 없음)</p>
   <p>블라인드 에코는 소리로 푸는 오디오 방탈출 게임입니다.
   <strong>개인정보를 수집하지 않으며, 별도의 민감한 권한을 요구하지 않습니다.</strong></p>
   <ul>
@@ -148,7 +191,8 @@
         앱 삭제 시 함께 삭제됩니다.</li>
   </ul>
 
-  <h2>10. 알림 접근 권한 (안읽은척)</h2>
+  <h2 id="app-readvault">10. 안읽은척</h2>
+  <p class="perm">사용 권한 · <b>알림 접근</b> · <b>배터리 최적화 제외</b>(선택)</p>
   <p>안읽은척은 <strong>사용자 본인 기기에 도착한 알림</strong>을 기기 내부에 보관해,
   메신저 앱을 열지 않고도 내용을 확인할 수 있게 해주는 앱입니다.
   다른 사람의 기기를 감시하거나 원격으로 들여다보는 기능은 없으며,
@@ -170,14 +214,14 @@
     <li>앱을 삭제하면 저장된 모든 메시지와 이미지가 함께 삭제됩니다.</li>
   </ul>
 
-  <h2>11. 광고 (Google AdMob)</h2>
+  <h2 id="common-ads">11. 광고 (Google AdMob) — 모든 앱 공통</h2>
   <p>앱에는 Google AdMob 광고가 포함되어 있습니다. Google 은 광고 제공을 위해
   광고 ID 등 일부 기기 정보를 수집할 수 있습니다. 자세한 내용은
   <a href="https://policies.google.com/privacy" target="_blank">Google 개인정보처리방침</a> 및
   <a href="https://support.google.com/admob/answer/6128543" target="_blank">AdMob 데이터 안내</a>를
   참고하세요.</p>
 
-  <h2>12. 아동의 개인정보</h2>
+  <h2>12. 아동의 개인정보 — 모든 앱 공통</h2>
   <p>저희 앱은 아동을 대상으로 개인정보를 수집하지 않습니다.</p>
 
   <h2>13. 문의</h2>
